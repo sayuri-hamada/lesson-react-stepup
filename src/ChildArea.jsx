@@ -1,11 +1,12 @@
-import React from "react";
+import { memo } from "react";
 const style = {
   width: "100%",
   height: "200px",
   backgroundColor: "khaki"
 };
 
-export const ChildArea = (props) => {
+//コンポーネントでmemoで囲ってpropsの値に変更があった場合のみ再レンダリングするように変更
+export const ChildArea = memo((props) => {
   //親からopenの値を受け取って三項演算子で表示を制御
   const { open } = props;
   console.log("ChildAreaがレンダリングされた");
@@ -25,4 +26,4 @@ export const ChildArea = (props) => {
       ) : null}
     </>
   );
-};
+});
