@@ -6,6 +6,7 @@ const style = {
 };
 
 export const ChildArea = (props) => {
+  //親からopenの値を受け取って三項演算子で表示を制御
   const { open } = props;
   return (
     <>
